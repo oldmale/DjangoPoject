@@ -1,0 +1,18 @@
+{% extends 'web/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if error_msg %}
+<div class="alert alert-danger" role="alert">
+{{ error_msg }}
+
+</div>
+{% else %}
+
+{% for img in imgs %}
+    <img src="/media/{{ img.image }}" height="230" width="230">
+{% endfor %}
+{% endif %}
+{% endblock content %}

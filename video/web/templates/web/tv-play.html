@@ -1,0 +1,10 @@
+{% load static %}
+{% block content %}
+
+{% for i in data %}
+    <a href="#">
+        <img src="/media/{{ i.image }}" width="300" height="300">
+    </a>
+
+{% endfor %}
+{% endblock content %}
